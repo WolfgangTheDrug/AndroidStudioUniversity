@@ -13,7 +13,7 @@
         android:layout_height="70dp"
         android:autoText="false"
         android:ems="10"
-        android:hint="Podaj imie: "
+        android:hint="@string/podaj_imie"
         android:inputType="textPersonName" />
 
     <EditText
@@ -22,33 +22,46 @@
         android:layout_height="70dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="Podaj nazwisko:" />
+        android:hint="@string/podaj_nazwisko" />
 
     <LinearLayout
+        style="?android:attr/buttonBarStyle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/hiButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/teal_200"
-            android:text="Say Hi!" />
+            android:onClick="witaj"
+            android:text="@string/say_hi" />
 
         <Button
             android:id="@+id/byeButton"
+            style="@style/Widget.AppCompat.Button.Borderless"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:backgroundTint="@color/teal_200"
-            android:text="Say Bye!" />
+            android:onClick="zegnaj"
+            android:text="@string/say_bye" />
+
     </LinearLayout>
 
     <TextView
         android:id="@+id/tvHello"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:backgroundTint="@color/white"
+        android:gravity="center_vertical"
+        android:text="@string/witaj"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="24sp" />
 
 </LinearLayout>

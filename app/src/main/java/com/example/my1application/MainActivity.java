@@ -2,6 +2,7 @@ package com.example.my1application;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etNazwisko;
     private TextView tvHello;
     private Button byeButton;
+    private Button hiButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +27,14 @@ public class MainActivity extends AppCompatActivity {
         etImie = (EditText) findViewById(R.id.etImie);
         etNazwisko = (EditText) findViewById(R.id.etNazwisko);
         tvHello = (TextView) findViewById(R.id.tvHello);
+        hiButton = (Button) findViewById(R.id.hiButton);
         byeButton = (Button) findViewById(R.id.byeButton);
+        hiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                witaj(v);
+            }
+        });
         byeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,13 +42,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Log.d(TAG, "Metoda onCreate");
-    }
 
-    @Override
-    protected void onPause(){
-        super.onPause();
-        Log.d(TAG, "Metoda onPause");
+        Log.d(TAG, "Metoda onCreate");
     }
 
     @Override
@@ -49,10 +53,36 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onPause(){
+        super.onPause();
+        Log.d(TAG, "Metoda onPause");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d(TAG, "Metoda onResume");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d(TAG, "Metoda onStop");
+    }
+
+    @Override
     protected void onRestart() {
         super.onRestart();
         Log.d(TAG, "metoda onResume");
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d(TAG, "Metoda onDestroy");
+    }
+
+    //onCreate(), onStart(), onResume(), onPause(), onStop(), onDestroy(), onRestart()
 
     public void witaj(View view) {
         String imie = etImie.getText().toString();
@@ -61,10 +91,11 @@ public class MainActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this, "Wypełnił obydwa pola!", Toast.LENGTH_LONG);
             toast.show();
         } else {
-            tvHello.setText(String.format("Dzień dobry, .%s .%s", imie, nazwisko));
+            tvHello.setText(String.format("Dzień dobry, %s %s", imie, nazwisko));
         }
     }
 
+    @SuppressLint("SetTextI18n")
     public void zegnaj(View view) {
         tvHello.setText("Żegnaj!");
     }
