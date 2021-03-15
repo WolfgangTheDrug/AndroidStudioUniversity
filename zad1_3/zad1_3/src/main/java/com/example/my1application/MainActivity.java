@@ -1,4 +1,4 @@
-package com.example.zad1_3;
+package com.example.my1application;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,8 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText etImie;
     private EditText etNazwisko;
     private TextView tvHello;
-    private Button toggleableButton;
-    private Integer clickCounter = 0;
+    private Button byeButton;
+    private Button hiButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,15 +27,18 @@ public class MainActivity extends AppCompatActivity {
         etImie = (EditText) findViewById(R.id.etImie);
         etNazwisko = (EditText) findViewById(R.id.etNazwisko);
         tvHello = (TextView) findViewById(R.id.tvHello);
-        toggleableButton = (Button) findViewById(R.id.toggleableButton);
-        toggleableButton.setOnClickListener(new View.OnClickListener() {
+        hiButton = (Button) findViewById(R.id.hiButton);
+        byeButton = (Button) findViewById(R.id.byeButton);
+        hiButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (clickCounter % 2 == 0) {
-                    witaj(v);
-                } else {
-                    zegnaj(v);
-                }
+                witaj(v);
+            }
+        });
+        byeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                zegnaj(v);
             }
         });
 
@@ -81,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 
     //onCreate(), onStart(), onResume(), onPause(), onStop(), onDestroy(), onRestart()
 
-    @SuppressLint("SetTextI18n")
     public void witaj(View view) {
         String imie = etImie.getText().toString();
         String nazwisko = etNazwisko.getText().toString();
@@ -90,15 +92,11 @@ public class MainActivity extends AppCompatActivity {
             toast.show();
         } else {
             tvHello.setText(String.format("Dzień dobry, %s %s", imie, nazwisko));
-            clickCounter++;
-            toggleableButton.setText("Say Bye!");
         }
     }
 
     @SuppressLint("SetTextI18n")
     public void zegnaj(View view) {
         tvHello.setText("Żegnaj!");
-        clickCounter++;
-        toggleableButton.setText("Say Hi!");
     }
 }

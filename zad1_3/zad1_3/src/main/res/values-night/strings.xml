@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">First App</string>
+    <string name="witaj">Witaj</string>
+    <string name="say_bye">Say Bye!</string>
+    <string name="say_hi">Say Hi!</string>
+    <string name="podaj_nazwisko">Podaj nazwisko:</string>
+    <string name="podaj_imie">Podaj imie:</string>
+</resources>
