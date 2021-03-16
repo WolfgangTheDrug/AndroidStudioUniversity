@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">zad1_4</string>
+    <string name="niemcy">Niemcy</string>
+    <string name="wlochy">Włochy</string>
+    <string name="polska">Polska</string>
+    <string name="stolica">Stolica</string>
+    <string name="sprawdz">Sprawdź</string>
+    <string name="panstwo">Państwo</string>
+    <string name="name">Name</string>
 </resources>

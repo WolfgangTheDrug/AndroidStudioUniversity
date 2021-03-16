@@ -5,96 +5,109 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1">
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/panstwo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Państwo" />
+                android:text="@string/panstwo"
+                android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/stolica"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Stolica" />
+                android:text="@string/stolica"
+                android:textSize="24sp" />
         </TableRow>
 
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/purple_500" />
+
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/polska" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName"
+                android:id="@+id/odpPolska"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:inputType="textShortMessage|textNoSuggestions" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/niemcy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/niemcy" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName2"
+                android:id="@+id/odpNiemcy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:inputType="textShortMessage|textNoSuggestions" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" >
+            android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/wlochy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="TextView" />
+                android:text="@string/wlochy" />
 
             <EditText
-                android:id="@+id/editTextTextPersonName3"
+                android:id="@+id/odpWlochy"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:inputType="textShortMessage|textNoSuggestions" />
         </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@color/purple_500" />
     </TableLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/sprawdz"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:text="@string/sprawdz" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:gravity="center_horizontal"
+        android:text="Hello World!"
+        android:textSize="30sp" />
 
 </LinearLayout>
