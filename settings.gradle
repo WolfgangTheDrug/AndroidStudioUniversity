@@ -1,3 +1,4 @@
+include ':zad1_4'
 include ':zad1_3'
 include ':app'
 rootProject.name = "My1Application"
