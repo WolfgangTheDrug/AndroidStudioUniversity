@@ -1,113 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="10dp"
-    tools:context=".MainActivity">
+    app:layout_anchorGravity="center">
 
-    <TableLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:stretchColumns="0,1">
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="10dp"
+        tools:context=".MainActivity">
 
-        <TableRow
+        <TextView
+            android:id="@+id/tytul"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="Prosty Quiz!"
+            android:textColor="@color/purple_700"
+            android:textSize="36sp" />
 
-            <TextView
-                android:id="@+id/panstwo"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/panstwo"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/stolica"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/stolica"
-                android:textSize="24sp" />
-        </TableRow>
-
-        <View
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:background="@color/purple_500" />
+            android:layout_height="wrap_content"
+            android:stretchColumns="0,1">
 
-        <TableRow
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/panstwo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/panstwo"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/stolica"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/stolica"
+                    android:textSize="24sp" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/purple_500" />
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/polska" />
+
+                <EditText
+                    android:id="@+id/odpPolska"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textShortMessage|textNoSuggestions" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/niemcy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/niemcy" />
+
+                <EditText
+                    android:id="@+id/odpNiemcy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textShortMessage|textNoSuggestions" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/wlochy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/wlochy" />
+
+                <EditText
+                    android:id="@+id/odpWlochy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textShortMessage|textNoSuggestions" />
+            </TableRow>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:background="@color/purple_500" />
+        </TableLayout>
+
+        <Button
+            android:id="@+id/sprawdz"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:text="@string/sprawdz" />
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/polska" />
-
-            <EditText
-                android:id="@+id/odpPolska"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textShortMessage|textNoSuggestions" />
-        </TableRow>
-
-        <TableRow
+        <TextView
+            android:id="@+id/rezultat"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textSize="30sp" />
 
-            <TextView
-                android:id="@+id/niemcy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/niemcy" />
-
-            <EditText
-                android:id="@+id/odpNiemcy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textShortMessage|textNoSuggestions" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <TextView
-                android:id="@+id/wlochy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/wlochy" />
-
-            <EditText
-                android:id="@+id/odpWlochy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textShortMessage|textNoSuggestions" />
-        </TableRow>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:background="@color/purple_500" />
-    </TableLayout>
-
-    <Button
-        android:id="@+id/sprawdz"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/sprawdz" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Hello World!"
-        android:textSize="30sp" />
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>

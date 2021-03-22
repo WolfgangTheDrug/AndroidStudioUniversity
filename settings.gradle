@@ -1,3 +1,6 @@
+include ':zad1_8'
+include ':zad1_7'
+include ':zad1_6'
 include ':zad1_4'
 include ':zad1_3'
 include ':app'
