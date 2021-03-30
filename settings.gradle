@@ -1,3 +1,5 @@
+include ':zad1_9'
+include ':zad1_10'
 include ':zad1_8'
 include ':zad1_7'
 include ':zad1_6'
