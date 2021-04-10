@@ -7,9 +7,9 @@ public class Group {
     private String groupName;
     private List<Person> children;
 
-    public Group(String groupName, List<Person> children) {
+    public Group(String groupName) {
         this.groupName = groupName;
-        this.children = new ArrayList<>(children);
+        this.children = new ArrayList<>();
     }
 
     public String getGroupName() {
